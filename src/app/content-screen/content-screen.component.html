@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div>
+        <input type="email" class="form-control" (keyup)="serachByTitle($event)" [(ngModel)]="userTitle" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Serach By Title">
+
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Author</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of allUserData">
+                <td>{{item.id}}</td>
+                <td>{{item.title}}</td>
+                <td>{{item.author}}</td>
+            </tr>
+        </tbody>
+
+      </table>
+      <span *ngFor="let item of [1,2,3,4]" style="margin-left: 10px; background-color: aqua; border: 1px solid lightblue; justify-content: right;" (click)="changePage(item)">{{item}}</span>
+</div>
